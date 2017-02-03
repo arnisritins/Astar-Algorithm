@@ -1,0 +1,39 @@
+body {
+	margin: 40px;
+}
+
+#grid {
+    position: relative;
+    margin: 0 auto;
+    background: #fff;
+	border: 8px solid #616161;
+}
+
+.node {
+    position: absolute;
+	box-sizing: border-box;
+    background: #BDBDBD;
+    transition: all 0.2s ease-in-out;
+}
+
+.node.obstacle { background: #616161; }
+.node.path { background: #9CCC65; }
+.node.start, .node.goal { cursor: pointer; }
+.node.start { background: #C62828; }
+.node.goal { background: #558B2F; }
+.node.selected { opacity: 0.7; }
+
+#controls { margin-top: 20px; text-align: center; }
+#controls button {
+	cursor: pointer;
+	outline: none;	
+	padding: 8px 16px;
+	margin-right: 4px;
+	border: 0;
+	background: #616161;
+	font: bold 14px Arial;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: -1px -1px 0 rgba(0,0,0, 0.5);
+	color: #fff;
+}

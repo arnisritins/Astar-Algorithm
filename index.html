@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>A* Algorithm</title>
+    <link rel="stylesheet" href="grid.css">
+</head>
+<body>
+    <div id="grid"></div>
+    <div id="controls">
+        <button onclick="findPath()">Find</button>
+        <button onclick="Grid.randomize()">Randomize</button>
+        <button onclick="Grid.clear()">Clear</button>
+    </div>
+
+    <script src="grid.js"></script>
+    <script src="astar.js"></script>
+    <script>
+        Grid.init('grid', 12, 12);
+        function findPath() {
+            var path = Astar.find(Grid.output());
+            if (path)
+                Grid.walk(path);
+            else
+                alert('Path is not found!');
+        }
+    </script>
+</body>
+</html>
